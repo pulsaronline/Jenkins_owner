@@ -1,6 +1,6 @@
 package tests;
 
-        import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Configuration;
 import config.DriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -27,7 +27,6 @@ public class StudentRegistrationFormTests {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-//      gradle clean test -Dweb.browser = safari
         Configuration.browser = System.getProperty("web.browser", "chrome");
         //Configuration.remote = System.getProperty("remote");
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
@@ -51,8 +50,6 @@ public class StudentRegistrationFormTests {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console error logs", getConsoleLogs());
-//gradle clean test -Dremote.web.driver="https://user1:1234@selenoid.autotests.cloud/wd/hub/"
-// -Dvideo.storage="https://selenoid.autotests.cloud/video/"
         if(System.getProperty("video.storage") !="")
             attachVideo();
         closeWebDriver();
