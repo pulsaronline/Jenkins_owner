@@ -18,6 +18,7 @@ import static helpers.AttachmentHelper.*;
 public class StudentRegistrationFormTests {
     StudentRegistrationFormPage formPage;
     static DriverConfig driverConfig = ConfigFactory.create(DriverConfig.class);
+
     @BeforeAll
     public static void beforeAll() {
         Configuration.browserSize = "1024x768";
@@ -33,7 +34,7 @@ public class StudentRegistrationFormTests {
         //gradle clean test -Dremote.web.driver="https://user1:1234@selenoid.autotests.cloud/wd/hub/"
         //gradle clean test -Dremote.web.driver="https://%s:%s@selenoid.autotests.cloud/wd/hub/"
         String remoteWebDriver = System.getProperty("remote.web.driver");
-        if(remoteWebDriver !=null) {
+        if(remoteWebDriver != null) {
             String user = driverConfig.RemoteWebUser();
             String password = driverConfig.RemoteWebPassword();
             Configuration.remote = String.format(remoteWebDriver, user, password);
