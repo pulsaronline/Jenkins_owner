@@ -29,7 +29,7 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "com.github.javafaker:javafaker:1.0.2",
             "org.slf4j:slf4j-log4j12:1.7.30",
-            "org.aeonbits.owner:owner:1.0.8"
+            "org.aeonbits.owner:owner:1.0.12"
     )
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.1"
 }
