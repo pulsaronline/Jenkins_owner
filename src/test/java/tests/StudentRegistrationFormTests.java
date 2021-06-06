@@ -40,7 +40,7 @@ public class StudentRegistrationFormTests {
 
             System.out.println(user);
             System.out.println(password);
-            System.out.println(System.getProperty(remoteWebDriver));
+            System.out.println(remoteWebDriver);
             System.out.println(String.format(remoteWebDriver, user, password));
         }
     }

@@ -1,5 +1,7 @@
 package pages;
 
+import tests.StudentRegistrationFormTests;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -7,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static tests.TestData.*;
 
-public class StudentRegistrationFormPage {
+public class StudentRegistrationFormPage extends StudentRegistrationFormTests {
     private final String BASE_URL = "https://demoqa.com/automation-practice-form";
     private final String checkTheFormHeader = "Student Registration Form";
     private final String resultPageHeader = "Thanks for submitting the form";
